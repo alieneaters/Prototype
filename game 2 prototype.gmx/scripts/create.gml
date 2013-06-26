@@ -1,5 +1,6 @@
-d3d_start ();
+d3d_start ()
 p3dc_init ()
+md2_Init ()
 view_enabled=true
 view_hport[0]=display_get_width ()
 view_wport[0]=display_get_height ()
@@ -19,6 +20,15 @@ view_visible[0]=true
 global.level_colid=p3dc_begin_model ()
 p3dc_add_model ("Level model.d3d",0,0,0)
 p3dc_end_model ()
+
+col=p3dc_begin_model ()
+p3dc_add_block (-5,-5,-5,5,5,5)
+p3dc_end_model ()
+
+level_mod=d3d_model_create ()
+d3d_model_load (level_mod,"Level model.d3d")
+
+maxframe=import_md2 ("Character.md2","Player_Animation")
 
 z=0
 xto=x

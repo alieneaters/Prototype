@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>enemy_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create ()
+            <string>model=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),0]
+model_tex=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),1]
+num_frames=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),2]
+z=0
+attacking=false
+espeed=1.5
+enhealth=70
+zsp=0
 </string>
           </argument>
         </arguments>
@@ -48,30 +55,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>step ()
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw ()
+            <string>var dis,dis2;
+dis = point_dis(0,-point_direction(0,z,1,z-9999999),global.level_colid)
+dis2 = point_dis(0,-point_direction(0,z,1,z+9999999),global.level_colid)
+if dis &lt; 50 then {z += 50-dis zsp = 0}
+if dis &gt; 55 then zsp -= 1
+if zsp &gt; 0 then zsp -= 0.5
+if zsp &lt; 0 then zsp += 0.5
+if dis2 &lt; 20 then
+{
+zsp = -1
+}
+z += zsp
+
+if dis_move (direction+180,0)&lt;20 {speed=0 attacking=true} 
+if dis_move (direction+180,0)&gt;20 &amp;&amp; point_dis (direction+180,0,global.level_colid)&gt;20 then {attacking=false speed=-(espeed)}
 </string>
           </argument>
         </arguments>
@@ -81,11 +79,11 @@
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
-  <PhysicsObjectDensity>0</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0</PhysicsObjectRestitution>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0</PhysicsObjectAngularDamping>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
