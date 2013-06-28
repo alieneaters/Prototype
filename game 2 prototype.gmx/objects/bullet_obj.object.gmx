@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,19 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=1
-repeat (15) {
-num=import_md2 ("data\ModelEN " + string (i) + ".md2","Enemy " + string (i))
-global.models[0,i,0]=internalFrame
-global.models[0,i,1]=background_add ("data\ModelEN " + string (i) + ".png",0,0)
-global.models[0,i,2]=num
-
-if i&lt;11 {
-num=import_md2 ("data\ModelMN " + string (i) + ".md2","Minion " + string (i))
-global.models[1,i,0]=internalFrame
-global.models[1,i,1]=background_add ("data\ModelMN " + string (i) + ".png",0,0)
-global.models[1,i,2]=num}
-i+=1
+            <string>var dmod;
+dmod=spd*cos(degtorad(pitch))
+z+=lengthdir_y(spd,pitch)
+x+=lengthdir_x(dmod,dir)
+y+=lengthdir_y(dmod,dir)
+if col_check (x,y,z,enemy_parent.x,enemy_parent.y,enemy_parent.z,5,enemy_parent.radius) then {
+with (other) instance_destroy ()
+instance_destroy ()
 }
 </string>
           </argument>

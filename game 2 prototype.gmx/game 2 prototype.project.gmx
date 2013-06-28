@@ -83,31 +83,45 @@
     <script>scripts\import_md2.gml</script>
     <script>scripts\md2_Free.gml</script>
     <script>scripts\extract.gml</script>
-    <script>scripts\dir_to_point.gml</script>
+    <script>scripts\bullet_create.gml</script>
+    <script>scripts\col_check.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_control</object>
-    <object>objects\obj_init</object>
-    <object>objects\minion_0_1</object>
-    <objects name="Enemy">
-      <object>objects\enemy_0_1</object>
-      <object>objects\enemy_0_2</object>
-      <object>objects\enemy_0_3</object>
-      <object>objects\enemy_0_4</object>
-      <object>objects\enemy_0_5</object>
-      <object>objects\enemy_0_6</object>
-      <object>objects\enemy_0_7</object>
-      <object>objects\enemy_0_8</object>
-      <object>objects\enemy_0_9</object>
-      <object>objects\enemy_0_10</object>
-      <object>objects\enemy_0_11</object>
-      <object>objects\enemy_0_12</object>
-      <object>objects\enemy_0_13</object>
-      <object>objects\enemy_0_14</object>
-      <object>objects\enemy_0_15</object>
-      <object>objects\enemy_parent</object>
+    <objects name="Wave">
+      <objects name="Enemy">
+        <object>objects\enemy_0_1</object>
+        <object>objects\enemy_0_2</object>
+        <object>objects\enemy_0_3</object>
+        <object>objects\enemy_0_4</object>
+        <object>objects\enemy_0_5</object>
+        <object>objects\enemy_0_6</object>
+        <object>objects\enemy_0_7</object>
+        <object>objects\enemy_0_8</object>
+        <object>objects\enemy_0_9</object>
+        <object>objects\enemy_0_10</object>
+        <object>objects\enemy_0_11</object>
+        <object>objects\enemy_0_12</object>
+        <object>objects\enemy_0_13</object>
+        <object>objects\enemy_0_14</object>
+        <object>objects\enemy_0_15</object>
+        <object>objects\enemy_parent</object>
+      </objects>
+      <object>objects\minion_0_1</object>
+      <object>objects\obj_control</object>
+      <object>objects\bullet_obj</object>
+    </objects>
+    <objects name="Menu">
+      <object>objects\obj_init</object>
     </objects>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\scene_menu</room>
+    <room>rooms\scene_select</room>
+    <room>rooms\scene_wave</room>
+  </rooms>
+  <constants number="1">
+    <constant name="dead">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

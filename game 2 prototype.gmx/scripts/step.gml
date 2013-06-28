@@ -17,4 +17,4 @@ if y>y_3d {if point_dis(direction,0,global.level_colid) > 20 then {speed=3} else
 if y<y_3d {if point_dis(direction+180,0,global.level_colid) > 20 then {speed=-3} else {speed=0} walking=true}}
 if mouse_check_button_released (mb_left) {speed=0 walking=false}
 
-if walking=false && point_distance_3d (x,y,z,enemy_parent.x,enemy_parent.y,enemy_parent.z) then {}
+if walking=false && point_distance_3d (x,y,z,enemy_parent.x,enemy_parent.y,enemy_parent.z) then {bullet_create (x,y,z,bullet_obj,(change_angle),0,(change_speed))}
