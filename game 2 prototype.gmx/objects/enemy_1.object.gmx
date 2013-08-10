@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>load_data ()
+            <string>data ()
 
 z=0
 attacking=false
@@ -92,7 +92,7 @@ if dis_move (direction+180,0)&gt;20 &amp;&amp; point_dis (direction+180,0,global
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d3d_model_draw (model[frame],x,y,z,background_get_texture (model_tex))
+            <string>d3d_model_draw (internalFrame[frame],x,y,z,background_get_texture (modex))
 </string>
           </argument>
         </arguments>

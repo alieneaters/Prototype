@@ -25,9 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>model=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),0]
-model_tex=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),1]
-num_frames=global.models[extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),2]
+            <string>model=global.models [i1(
+extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),0),i2(extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),0)]
+model_tex=global.models [i1(
+extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),1),i2(extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),1)]
+num_frames=global.models [i1(
+extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),2),i2(extract (object_get_name (self),"_",1),extract (object_get_name (self),"_",2),2)]
 </string>
           </argument>
         </arguments>
