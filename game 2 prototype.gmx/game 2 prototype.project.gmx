@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="4" name="datafiles">
     <datafile>
       <name>C.dll</name>
       <exists>-1</exists>
@@ -86,6 +86,7 @@
     <script>scripts\bullet_create.gml</script>
     <script>scripts\col_check.gml</script>
     <script>scripts\data.gml</script>
+    <script>scripts\dat.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Wave">
