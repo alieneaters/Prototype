@@ -30,8 +30,7 @@ dmod=spd*cos(degtorad(pitch))
 z+=lengthdir_y(spd,pitch)
 x+=lengthdir_x(dmod,dir)
 y+=lengthdir_y(dmod,dir)
-if col_check (x,y,z,enemy_parent.x,enemy_parent.y,enemy_parent.z,5,enemy_parent.radius) then {
-with (other) instance_destroy ()
+if col_check (x,y,z,enemy_parent.x,enemy_parent.y,enemy_parent.z,5,20) then {
 instance_destroy ()
 }
 </string>

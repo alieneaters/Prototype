@@ -6,4 +6,5 @@ tmpinst.z=argument2
 tmpinst.pitch=-argument4
 tmpinst.dir=argument5
 tmpinst.spd=argument6
+tmpinst.dam=global.bowl_dam
 return tmpinst;

@@ -22,71 +22,116 @@
       <filename></filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\math_stuff</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_play</sprite>
+    <sprite>sprites\min2</sprite>
+    <sprite>sprites\inv_item_bg</sprite>
+    <sprite>sprites\inv_item_sel</sprite>
+    <sprite>sprites\spr_ab</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Object Scripts">
-      <script>scripts\step.gml</script>
-      <script>scripts\draw.gml</script>
-      <script>scripts\create.gml</script>
+    <scripts name="Wave">
+      <scripts name="Object Scripts">
+        <script>scripts\step.gml</script>
+        <script>scripts\draw.gml</script>
+        <script>scripts\create.gml</script>
+        <scripts name="Minions/Enemies">
+          <script>scripts\extract.gml</script>
+          <script>scripts\dat.gml</script>
+          <script>scripts\data.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="3D Core Stuff">
+        <script>scripts\p3dc_get_lastmask.gml</script>
+        <script>scripts\Convert_2d.gml</script>
+        <script>scripts\Convert_Prepare.gml</script>
+        <script>scripts\p3dc_add_block.gml</script>
+        <script>scripts\Convert_3d.gml</script>
+        <script>scripts\p3dc_begin_overwrite.gml</script>
+        <script>scripts\p3dc_add_model.gml</script>
+        <script>scripts\p3dc_add_floor.gml</script>
+        <script>scripts\p3dc_add_cone.gml</script>
+        <script>scripts\p3dc_end_replace.gml</script>
+        <script>scripts\p3dc_add_cylinder.gml</script>
+        <script>scripts\p3dc_check_still.gml</script>
+        <script>scripts\p3dc_add_triangle.gml</script>
+        <script>scripts\p3dc_begin_model.gml</script>
+        <script>scripts\p3dc_overwrite_triangle.gml</script>
+        <script>scripts\p3dc_add_wall.gml</script>
+        <script>scripts\p3dc_end_overwrite.gml</script>
+        <script>scripts\p3dc_check_rotation.gml</script>
+        <script>scripts\p3dc_check_split.gml</script>
+        <script>scripts\p3dc_clear_model.gml</script>
+        <script>scripts\p3dc_begin_replace.gml</script>
+        <script>scripts\p3dc_free.gml</script>
+        <script>scripts\p3dc_check.gml</script>
+        <script>scripts\p3dc_init.gml</script>
+        <script>scripts\p3dc_get_models.gml</script>
+        <script>scripts\p3dc_overwrite_wall.gml</script>
+        <script>scripts\import_md2.gml</script>
+        <script>scripts\p3dc_get_triangles.gml</script>
+        <script>scripts\p3dc_get_splitid.gml</script>
+        <script>scripts\p3dc_overwrite_block.gml</script>
+        <script>scripts\p3dc_overwrite_cone.gml</script>
+        <script>scripts\p3dc_ray.gml</script>
+        <script>scripts\p3dc_ray_first.gml</script>
+        <script>scripts\p3dc_overwrite_cylinder.gml</script>
+        <script>scripts\p3dc_overwrite_floor.gml</script>
+        <script>scripts\p3dc_set_modrot.gml</script>
+        <script>scripts\p3dc_ray_split.gml</script>
+        <script>scripts\p3dc_ray_still.gml</script>
+        <script>scripts\p3dc_ray_rotation.gml</script>
+        <script>scripts\dis_move.gml</script>
+        <script>scripts\p3dc_triangle_data.gml</script>
+        <script>scripts\p3dc_set_trianglemask.gml</script>
+        <script>scripts\p3dc_split_model.gml</script>
+        <script>scripts\point_dis.gml</script>
+        <script>scripts\md2_Free.gml</script>
+        <script>scripts\col_check.gml</script>
+        <script>scripts\md2_Init.gml</script>
+        <script>scripts\bullet_create.gml</script>
+        <script>scripts\p3dc_end_model.gml</script>
+      </scripts>
     </scripts>
-    <script>scripts\Convert_2d.gml</script>
-    <script>scripts\Convert_3d.gml</script>
-    <script>scripts\Convert_Prepare.gml</script>
-    <script>scripts\p3dc_add_block.gml</script>
-    <script>scripts\p3dc_add_cone.gml</script>
-    <script>scripts\p3dc_add_cylinder.gml</script>
-    <script>scripts\p3dc_add_floor.gml</script>
-    <script>scripts\p3dc_add_model.gml</script>
-    <script>scripts\p3dc_add_triangle.gml</script>
-    <script>scripts\p3dc_add_wall.gml</script>
-    <script>scripts\p3dc_begin_model.gml</script>
-    <script>scripts\p3dc_begin_overwrite.gml</script>
-    <script>scripts\p3dc_begin_replace.gml</script>
-    <script>scripts\p3dc_check.gml</script>
-    <script>scripts\p3dc_check_rotation.gml</script>
-    <script>scripts\p3dc_check_split.gml</script>
-    <script>scripts\p3dc_check_still.gml</script>
-    <script>scripts\p3dc_clear_model.gml</script>
-    <script>scripts\p3dc_end_model.gml</script>
-    <script>scripts\p3dc_end_overwrite.gml</script>
-    <script>scripts\p3dc_end_replace.gml</script>
-    <script>scripts\p3dc_free.gml</script>
-    <script>scripts\p3dc_get_lastmask.gml</script>
-    <script>scripts\p3dc_get_models.gml</script>
-    <script>scripts\p3dc_get_splitid.gml</script>
-    <script>scripts\p3dc_get_triangles.gml</script>
-    <script>scripts\p3dc_init.gml</script>
-    <script>scripts\p3dc_overwrite_block.gml</script>
-    <script>scripts\p3dc_overwrite_cone.gml</script>
-    <script>scripts\p3dc_overwrite_cylinder.gml</script>
-    <script>scripts\p3dc_overwrite_floor.gml</script>
-    <script>scripts\p3dc_overwrite_triangle.gml</script>
-    <script>scripts\p3dc_overwrite_wall.gml</script>
-    <script>scripts\p3dc_ray.gml</script>
-    <script>scripts\p3dc_ray_first.gml</script>
-    <script>scripts\p3dc_ray_rotation.gml</script>
-    <script>scripts\p3dc_ray_split.gml</script>
-    <script>scripts\p3dc_ray_still.gml</script>
-    <script>scripts\p3dc_set_modrot.gml</script>
-    <script>scripts\p3dc_set_trianglemask.gml</script>
-    <script>scripts\p3dc_split_model.gml</script>
-    <script>scripts\p3dc_triangle_data.gml</script>
-    <script>scripts\point_dis.gml</script>
-    <script>scripts\dis_move.gml</script>
-    <script>scripts\md2_Init.gml</script>
-    <script>scripts\import_md2.gml</script>
-    <script>scripts\md2_Free.gml</script>
-    <script>scripts\extract.gml</script>
-    <script>scripts\bullet_create.gml</script>
-    <script>scripts\col_check.gml</script>
-    <script>scripts\data.gml</script>
-    <script>scripts\dat.gml</script>
+    <scripts name="Inventory">
+      <script>scripts\ns.gml</script>
+      <script>scripts\unit_add.gml</script>
+      <script>scripts\mou_in.gml</script>
+      <script>scripts\draw_inv_min.gml</script>
+      <script>scripts\dradone.gml</script>
+      <script>scripts\unit_done.gml</script>
+    </scripts>
+    <scripts name="Minions">
+      <script>scripts\dec_min.gml</script>
+      <script>scripts\qqq.gml</script>
+      <script>scripts\www.gml</script>
+      <script>scripts\eee.gml</script>
+      <script>scripts\rrr.gml</script>
+      <script>scripts\ttt.gml</script>
+      <script>scripts\yyy.gml</script>
+      <script>scripts\uuu.gml</script>
+      <script>scripts\iii.gml</script>
+      <script>scripts\ooo.gml</script>
+      <script>scripts\ppp.gml</script>
+      <script>scripts\aaa.gml</script>
+      <script>scripts\sss.gml</script>
+      <script>scripts\ddd.gml</script>
+      <script>scripts\fff.gml</script>
+      <script>scripts\ggg.gml</script>
+      <script>scripts\hhh.gml</script>
+    </scripts>
+    <scripts name="Levels">
+      <script>scripts\get_unit.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Wave">
@@ -101,8 +146,10 @@
         <object>objects\bullet_obj</object>
       </objects>
     </objects>
+    <object>objects\inventory</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\wave</room>
   </rooms>
   <constants number="1">
