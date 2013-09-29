@@ -22,71 +22,78 @@
       <filename></filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\math_stuff</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_play</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="3D Core Stuff">
+      <script>scripts\p3dc_get_lastmask.gml</script>
+      <script>scripts\Convert_2d.gml</script>
+      <script>scripts\Convert_Prepare.gml</script>
+      <script>scripts\p3dc_add_block.gml</script>
+      <script>scripts\Convert_3d.gml</script>
+      <script>scripts\p3dc_begin_overwrite.gml</script>
+      <script>scripts\p3dc_add_model.gml</script>
+      <script>scripts\p3dc_add_floor.gml</script>
+      <script>scripts\p3dc_add_cone.gml</script>
+      <script>scripts\p3dc_end_replace.gml</script>
+      <script>scripts\p3dc_add_cylinder.gml</script>
+      <script>scripts\p3dc_check_still.gml</script>
+      <script>scripts\p3dc_add_triangle.gml</script>
+      <script>scripts\p3dc_begin_model.gml</script>
+      <script>scripts\p3dc_overwrite_triangle.gml</script>
+      <script>scripts\p3dc_add_wall.gml</script>
+      <script>scripts\p3dc_end_overwrite.gml</script>
+      <script>scripts\p3dc_check_rotation.gml</script>
+      <script>scripts\p3dc_check_split.gml</script>
+      <script>scripts\p3dc_clear_model.gml</script>
+      <script>scripts\p3dc_begin_replace.gml</script>
+      <script>scripts\p3dc_free.gml</script>
+      <script>scripts\p3dc_check.gml</script>
+      <script>scripts\p3dc_init.gml</script>
+      <script>scripts\p3dc_get_models.gml</script>
+      <script>scripts\p3dc_overwrite_wall.gml</script>
+      <script>scripts\import_md2.gml</script>
+      <script>scripts\p3dc_get_triangles.gml</script>
+      <script>scripts\p3dc_get_splitid.gml</script>
+      <script>scripts\p3dc_overwrite_block.gml</script>
+      <script>scripts\p3dc_overwrite_cone.gml</script>
+      <script>scripts\p3dc_ray.gml</script>
+      <script>scripts\p3dc_ray_first.gml</script>
+      <script>scripts\p3dc_overwrite_cylinder.gml</script>
+      <script>scripts\p3dc_overwrite_floor.gml</script>
+      <script>scripts\p3dc_set_modrot.gml</script>
+      <script>scripts\p3dc_ray_split.gml</script>
+      <script>scripts\p3dc_ray_still.gml</script>
+      <script>scripts\p3dc_ray_rotation.gml</script>
+      <script>scripts\dis_move.gml</script>
+      <script>scripts\p3dc_triangle_data.gml</script>
+      <script>scripts\p3dc_set_trianglemask.gml</script>
+      <script>scripts\p3dc_split_model.gml</script>
+      <script>scripts\point_dis.gml</script>
+      <script>scripts\md2_Free.gml</script>
+      <script>scripts\col_check.gml</script>
+      <script>scripts\md2_Init.gml</script>
+      <script>scripts\bullet_create.gml</script>
+      <script>scripts\p3dc_end_model.gml</script>
+    </scripts>
     <scripts name="Object Scripts">
       <script>scripts\step.gml</script>
       <script>scripts\draw.gml</script>
       <script>scripts\create.gml</script>
+      <scripts name="Minions/Enemies">
+        <script>scripts\extract.gml</script>
+        <script>scripts\dat.gml</script>
+        <script>scripts\data.gml</script>
+      </scripts>
     </scripts>
-    <script>scripts\Convert_2d.gml</script>
-    <script>scripts\Convert_3d.gml</script>
-    <script>scripts\Convert_Prepare.gml</script>
-    <script>scripts\p3dc_add_block.gml</script>
-    <script>scripts\p3dc_add_cone.gml</script>
-    <script>scripts\p3dc_add_cylinder.gml</script>
-    <script>scripts\p3dc_add_floor.gml</script>
-    <script>scripts\p3dc_add_model.gml</script>
-    <script>scripts\p3dc_add_triangle.gml</script>
-    <script>scripts\p3dc_add_wall.gml</script>
-    <script>scripts\p3dc_begin_model.gml</script>
-    <script>scripts\p3dc_begin_overwrite.gml</script>
-    <script>scripts\p3dc_begin_replace.gml</script>
-    <script>scripts\p3dc_check.gml</script>
-    <script>scripts\p3dc_check_rotation.gml</script>
-    <script>scripts\p3dc_check_split.gml</script>
-    <script>scripts\p3dc_check_still.gml</script>
-    <script>scripts\p3dc_clear_model.gml</script>
-    <script>scripts\p3dc_end_model.gml</script>
-    <script>scripts\p3dc_end_overwrite.gml</script>
-    <script>scripts\p3dc_end_replace.gml</script>
-    <script>scripts\p3dc_free.gml</script>
-    <script>scripts\p3dc_get_lastmask.gml</script>
-    <script>scripts\p3dc_get_models.gml</script>
-    <script>scripts\p3dc_get_splitid.gml</script>
-    <script>scripts\p3dc_get_triangles.gml</script>
-    <script>scripts\p3dc_init.gml</script>
-    <script>scripts\p3dc_overwrite_block.gml</script>
-    <script>scripts\p3dc_overwrite_cone.gml</script>
-    <script>scripts\p3dc_overwrite_cylinder.gml</script>
-    <script>scripts\p3dc_overwrite_floor.gml</script>
-    <script>scripts\p3dc_overwrite_triangle.gml</script>
-    <script>scripts\p3dc_overwrite_wall.gml</script>
-    <script>scripts\p3dc_ray.gml</script>
-    <script>scripts\p3dc_ray_first.gml</script>
-    <script>scripts\p3dc_ray_rotation.gml</script>
-    <script>scripts\p3dc_ray_split.gml</script>
-    <script>scripts\p3dc_ray_still.gml</script>
-    <script>scripts\p3dc_set_modrot.gml</script>
-    <script>scripts\p3dc_set_trianglemask.gml</script>
-    <script>scripts\p3dc_split_model.gml</script>
-    <script>scripts\p3dc_triangle_data.gml</script>
-    <script>scripts\point_dis.gml</script>
-    <script>scripts\dis_move.gml</script>
-    <script>scripts\md2_Init.gml</script>
-    <script>scripts\import_md2.gml</script>
-    <script>scripts\md2_Free.gml</script>
-    <script>scripts\extract.gml</script>
-    <script>scripts\bullet_create.gml</script>
-    <script>scripts\col_check.gml</script>
-    <script>scripts\data.gml</script>
-    <script>scripts\dat.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Wave">
@@ -101,6 +108,7 @@
         <object>objects\bullet_obj</object>
       </objects>
     </objects>
+    <object>objects\inventory</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\wave</room>

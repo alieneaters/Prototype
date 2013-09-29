@@ -25,13 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>data ()
-
-z=0
-attacking=false
-zsp=0
-
-espeed=1.5
+            <string>espeed=1.5
 enhealth=70
 </string>
           </argument>
@@ -55,20 +49,12 @@ enhealth=70
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dis,dis2;
-dis = point_dis(0,-point_direction(0,z,1,z-9999999),global.level_colid)
-dis2 = point_dis(0,-point_direction(0,z,1,z+9999999),global.level_colid)
-if dis &lt; 50 then {z += 50-dis zsp = 0}
-if dis &gt; 55 then zsp -= 1
-if zsp &gt; 0 then zsp -= 0.5
-if zsp &lt; 0 then zsp += 0.5
-if dis2 &lt; 20 then
-{
-zsp = -1
-}
-z += zsp
+            <string>if instance_exists (bullet_obj){ 
+if col_check (x,y,z,bullet_obj.x,bullet_obj.y,bullet_obj.z,5,20) then {
+ehealth-=bullet_obj.dam
+}}
 
-if dis_move (direction+180,0)&lt;20 {speed=0 attacking=true} 
+if dis_move (direction+180,0)&lt;=range {speed=0 attacking=true} 
 if dis_move (direction+180,0)&gt;20 &amp;&amp; point_dis (direction+180,0,global.level_colid)&gt;20 then {attacking=false speed=-(espeed)}
 </string>
           </argument>
